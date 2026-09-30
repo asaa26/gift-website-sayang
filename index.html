@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#9cc9e8">
+  <title>For You, Sayang 💙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bgMusic" preload="auto" loop>
+    <!-- Tambahkan file musik milikmu dengan nama: assets/shape-of-my-heart.mp3 -->
+    <source src="assets/shape-of-my-heart.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <!-- LOCK SCREEN -->
+    <section id="lockScreen" class="screen active">
+      <div class="phone-glow"></div>
+      <div class="lock-content">
+        <div class="lock-time" id="clock">00:00</div>
+        <div class="lock-date">03 Oktober • untuk seseorang yang spesial 💙</div>
+
+        <div class="lock-icon">🔒</div>
+        <h1>Untuk Sayang</h1>
+        <p class="hint">Ada sesuatu kecil yang aku siapkan buat kamu.</p>
+
+        <button id="unlockBtn" class="primary-btn">
+          <span>Geser untuk membuka</span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SURPRISE -->
+    <section id="surpriseScreen" class="screen">
+      <div class="floating-hearts" aria-hidden="true">♡　♡　♡</div>
+      <div class="card">
+        <div class="gift-icon">🎁</div>
+        <p class="eyebrow">A little surprise</p>
+        <h2>Siap buka kejutannya?</h2>
+        <p>Jangan buru-buru tutup ya, masih ada satu hadiah kecil lagi di dalam sini.</p>
+        <button id="surpriseBtn" class="primary-btn">Buka Kejutan ✨</button>
+      </div>
+      <div id="confetti" class="confetti-layer" aria-hidden="true"></div>
+    </section>
+
+    <!-- BIRTHDAY -->
+    <section id="birthdayScreen" class="screen">
+      <div class="card birthday-card">
+        <div class="mini-label">03 • 10 • 2001</div>
+        <h2>Happy Birthday,<br><span>Sayang 💙</span></h2>
+        <p class="message">
+          Selamat ulang tahun, Sayang. Semoga di umur yang baru ini kamu selalu diberi
+          kesehatan, dimudahkan dalam setiap langkah, dilancarkan rezekinya, dan dikelilingi
+          hal-hal baik. Semoga apa yang kamu usahakan pelan-pelan bisa tercapai, dan semoga
+          kamu selalu punya alasan untuk tersenyum. 🤍
+        </p>
+        <p class="small-note">Semoga tahun ini jadi salah satu tahun yang paling baik buat kamu.</p>
+        <button id="photoBtn" class="secondary-btn">Lihat satu kenangan →</button>
+      </div>
+    </section>
+
+    <!-- PHOTO -->
+    <section id="photoScreen" class="screen">
+      <div class="media-card">
+        <div class="photo-frame">
+          <img src="assets/foto.jpg" alt="Satu kenangan untuk Sayang">
+        </div>
+        <p class="photo-caption">Satu foto, satu kenangan, dan masih banyak cerita yang belum selesai. 💙</p>
+        <button id="videoBtn" class="primary-btn">Lanjut ke video 🎥</button>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="videoScreen" class="screen">
+      <div class="media-card video-card">
+        <p class="eyebrow">One more thing...</p>
+        <h2>Untuk kamu 💙</h2>
+        <div class="video-wrap">
+          <video id="memoryVideo" controls playsinline preload="metadata">
+            <source src="assets/video.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+          </video>
+        </div>
+        <p id="videoStatus" class="video-status">Musik website berhenti saat video diputar, lalu dilanjutkan setelah video selesai.</p>
+        <button id="restartBtn" class="secondary-btn">Ulangi dari awal ↺</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
